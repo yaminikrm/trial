@@ -19,7 +19,7 @@
         width: 100%;
     }
 
-}
+},
 
 .cards-bg-container1 {
     background-image: url("https://res.cloudinary.com/dlcuxbo8m/image/upload/a_90/v1747214971/white_zka0hy.jpg");
@@ -951,7 +951,7 @@
     .fixed-button-container {
         background-color: white;
         position: fixed;
-        bottom: 250px;
+        bottom: 120px;
         right: 10px;
         cursor: pointer;
         transition: transform 0.3s ease;
@@ -988,3 +988,127 @@
     background-color: #45a049;
   }
 
+
+  /*Footer Section */
+  footer {
+    background-color: #fff;
+    color: #333;
+    padding: 40px 20px;
+    box-shadow: 0 -1px 6px rgba(0, 0, 0, 0.1);
+}
+
+.footer-container {
+    background-color:#F8F8FF;
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 30px;
+    padding: 10px 15px;
+}
+
+.footer-section {
+    flex: 1 1 180px;
+}
+
+.footer-section img {
+    height: 120px;
+}
+
+.footer-title {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 12px;
+    text-decoration: underline;
+}
+
+.footer-item {
+    font-size: 14px;
+    margin-bottom: 6px;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.footer-item:hover {
+    color: #007bff;
+}
+
+.social-icons {
+    display: flex;
+    gap: 12px;
+    margin-top: 10px;
+}
+
+.social-icons svg {
+    width: 20px;
+    height: 20px;
+    fill: #333;
+    transition: transform 0.2s, fill 0.3s;
+    cursor: pointer;
+}
+
+.social-icons svg:hover {
+    transform: scale(1.2);
+    fill: #007bff;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 13px;
+    color: #888;
+}
+
+.youtube-icon {
+    width: 25px !important;
+    height: 25px !important;
+    fill: #333;
+    transition: transform 0.2s, fill 0.3s;
+    cursor: pointer;
+}
+
+.youtube-icon:hover {
+    transform: scale(1.2);
+    fill: #FF0000;
+    /* Optional: change to red on hover */
+}
+
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-section {
+        flex: 1 1 100%;
+    }
+
+    .footer-section img {
+        height: 100px;
+    }
+}
+
+@media(min-width:768px) {
+    .footer-bottom {
+        text-align: center;
+        margin-top: 30px;
+        font-size: 13px;
+        color: #888;
+        margin-left: 360px;
+    }
+
+    .footer-container {
+        max-width: 1200px;
+        margin: auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 30px;
+        padding: 10px 15px;
+        margin-top: 15px;
+        margin-bottom :15px;
+    }
+
+}
