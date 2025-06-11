@@ -1,0 +1,474 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    <div>
+
+ <div class="container">
+        <div class="row">
+            <div class="col-12 col-md-9">
+                <h1 class="destination-heading mt-3">Discover The Best Of Srilanka <span class="destination-days-span">4 Nights / 5 Days</span></h1>
+                <div class="carousel-container">
+                    <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img class=" icon d-block w-100" src="https://res.cloudinary.com/dlcuxbo8m/image/upload/v1748671022/Pinnawala_Elephant_Orphanage_-_-_Image_source_unknown_t2cyjr.jpg" alt="First slide">
+                            </div>
+                            <div class="carousel-item">
+                                <img class="icon d-block w-100" src="https://res.cloudinary.com/dlcuxbo8m/image/upload/v1748671107/Royal_Botanic_Garden_Srilanka_djdlwu.jpg" alt="Second slide">
+                            </div>
+                            <div class="carousel-item">
+                                <img class="icon d-block w-100" src="https://res.cloudinary.com/dlcuxbo8m/image/upload/v1748671183/img-srlnka_vqiunn.jpg" alt="Third slide" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="buttons-container">
+                    <button class="options-button ml-4" onclick="display('sectionCardsContainer')">Day Wise Itinerary</button>
+                    <button class="options-button " onclick="display('sectionInclusionExclusion')">Inclusions/Exclusions</button>
+                    <button class="options-button" onclick="display('sectionTermsConditionsContainer')">Terms and Conditions</button>
+                </div>
+
+                <div id="sectionCardsContainer">
+                    <div class=" shadow cards-container">
+                        <h1 class="day-wise-itinerary-heading">Day Wise Itinerary</h1>
+                        <div class="cards-main-conatiner">
+                            <div class="daywise-heading-container">
+                                <h1 class="day-wise-heading">Day 01: Arrival – Pinnawala – Kandy</h1>
+                            </div>
+                            <div>
+                                <ul class="list-style mr-5 pt-1">
+                                    <li>Route: Bandaranaike International Airport → Pinnawala → Kandy, Meals: Dinner, Overnight Stay: Hotel in Kandy.</li>
+                                    <li>Meet & Greet At Airport</li>
+                                    <li>Warm welcome by our representative at Bandaranaike International Airport.</li>
+                                    <li>Proceed towards Kandy.</li>
+                                    <li>Visit Pinnawala Elephant Orphanage: (Established to care for orphaned elephants, Watch elephants bathe in the river (twice daily), Bottle-feeding of baby elephants (under 3 years)).</li>
+                                    <li>Explore Spice & Herbal Garden: (Learn about traditional spices: cinnamon, cardamom, nutmeg, pepper, and mace, Experience optional ayurvedic massage treatments using herbal oils).</li>
+                                    <li>Proceed To Kandy.</li>
+                                    <li>Visit The Temple Of The Sacred Tooth Relic: (A unesco world heritage site, Houses the sacred tooth relic of lord buddha).</li>
+                                    <li>Visit Lord Kataragama (Kadiragaman) Temple: (Dedicated to lord murugan (kartikeya), the hindu god of war, Significant religious and historical site).</li>
+                                    <li>Kandy City Tour: (Kandy Viewpoint – Panoramic city view from the highest point, Gem Museum – Learn about sri lanka’s gem industry, Cultural Show – Enjoy traditional sri lankan music, drumming, and dance).</li>  
+                                    <li>Dinner & Hotel Check-In: (Enjoy a relaxing dinner, Overnight stay at a hotel in kandy).</li>                        
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class=" cards-main-conatiner">
+                            <div class="daywise-heading-container">
+                                <h1 class="day-wise-heading">Day 02: Kandy – Nuwara Eliya</h1>
+                            </div>
+                            <div>
+                                <ul class="list-style mr-5 pt-1">
+                                    <li>Breakfast At The Hotel: (Begin your journey from Kandy to Nuwara Eliya after breakfast).</li>
+                                    <li>Kandy City Tour (If Not Covered On Day 01): (Gem Museum – Learn about Sri Lanka’s gem origins, rare minerals, and fossils from the Cambrian era, Art And Craft Center – Explore traditional local crafts, Upper Lake Drive – Scenic boat ride across Kandy Lake, Local Market – Shop for souvenirs, spices, and local produce).</li>
+                                    <li>Visit Peradeniya Botanical Garden: (Sri Lanka’s oldest formal garden with over 4,000 plant species, Famous for orchids, spices, medicinal plants, and palm-lined avenues, Spans over 147 acres and managed by the Department of Agriculture).</li>
+                                    <li>Visit Bhakta Hanuman Temple: (Located in Ramboda and linked to the Ramayana legend, Believed to be a resting place of Lord Hanuman during his search for Sita, Nearby village "Ravana Goda" reflects the Ramayana influence).</li>
+                                    <li>Visit Ramboda Falls: (A stunning natural waterfall formed by Ramboda Oya, Located along the scenic Kandy–Nuwara Eliya road).</li>
+                                    <li>Visit Tea Factory And Tea Plantation: (Explore lush tea estates of Nuwara Eliya, Learn about tea processing and taste fresh Ceylon tea, Ideal spot for photography and cultural immersion).</li>
+                                    <li>Nuwara Eliya City Tour: (Sri Lanka’s Oldest Post Office – Iconic red-brick colonial building, Colonial Buildings – Remnants of British architecture, St. Xavier’s Church – Historical Roman Catholic church, Victoria Park – Well-maintained botanical garden in the city center, Nuwara Eliya Race Course – Famous for horse racing during the season, Lake Gregory – Picturesque lake ideal for paddle boating and water sports).</li>
+                                    <li>Dinner And Hotel Check-In: (Enjoy dinner and relax at your hotel in Nuwara Eliya).</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="cards-main-conatiner">
+                            <div class="daywise-heading-container">
+                                <h1 class="day-wise-heading">Day 03: Nuwara Eliya – Bentota</h1>
+                            </div>
+                            <div>
+                                <ul class="list-style mr-5 pt-1">
+                                    <li>Breakfast At The Hotel: (Begin your journey from Nuwara Eliya to Bentota after a hearty breakfast).</li>
+                                    <li>Visit Sita Amman Temple: (Believed to be the site where Sita Devi was held captive by King Ravana, A stream near the temple is said to have catered to her needs during captivity, Hanuman's footprints are believed to be visible in the area, Historical discovery of three idols in the stream about a century ago, The soil here is dark, believed to have been scorched by Hanuman).</li>
+                                    <li>Explore Ashok Vatika (Ashokavanam): (The legendary garden where Sita Devi chose to stay rather than Ravana’s palace, Sheltered by a sacred Ashoka tree offering her comfort during captivity, Believed to have been partially destroyed by Hanuman during his search for Sita, The site remains an important part of the Ramayana trail in Sri Lanka).</li>
+                                    <li>Optional Stop: White Water Rafting In Kitulgala (Time and interest permitting): (Located between Kandy and Nuwara Eliya in a lush rainforest setting, Enjoy thrilling rafting on the Kelani River, Popular for activities like stream sliding, jungle trekking, bird watching, and cave exploration, Known as the filming location of the 1957 film Bridge on the River Kwai).</li>
+                                    <li>Visit Turtle Hatchery In Bentota: (Conservation center aimed at protecting endangered sea turtles, See species like the green turtle, leatherback, and olive ridley, Learn about the turtle conservation process from egg collection to release, Opportunity to witness and interact with young turtles).</li>
+                                    <li>Dinner And Hotel Check-In: (Arrive in Bentota, enjoy a relaxing dinner, and check in to your hotel, Overnight stay at a hotel in Bentota).</li>
+                                
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="cards-main-conatiner">
+                            <div class="daywise-heading-container">
+                                <h1 class="day-wise-heading">Day 04: Bentota – City Area – Colombo</h1>
+                            </div>
+                            <div>
+                                <ul class="list-style mr-5 pt-1">
+                                    <li>Breakfast At The Hotel: (Start the day with breakfast at your hotel in Bentota).</li>
+                                    <li>Bentota City Tour: (Explore the scenic coastal town of Bentota).</li>
+                                    <li>Optional Water Sports Activities (Time and interest permitting).</li>
+                                    <li>Enjoy thrilling water sports on Bentota Beach, Aturuwella, and Bentota River.</li>
+                                    <li>Activities include: (River cruises, Diving and snorkeling, Water skiing and speed boating, Kitesurfing and windsurfing, Banana boating and tubing).</li>
+                                    <li>Facilities available at Bentota Water Sports Centre and River Adventures.</li>
+                                    <li>Madhu River Safari: (Take a boat ride on the scenic Madu River, Spot wildlife such as water monitors, crocodiles, and water snakes, Observe birds like blue-eyed cormorants and fruit bats, Witness local fishermen and playful monkeys along the riverbanks, Enjoy the serene beauty of mangroves and floating islets).</li>
+                                    <li>Proceed To Colombo: (Travel from Bentota to Colombo, Afternoon at leisure to relax or explore on your own).</li>
+                                    <li>Dinner And Hotel Check-In: (Arrive in Colombo, enjoy a delicious dinner, and check in to your hotel, Overnight stay at a hotel in Colombo).</li>                                  
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="cards-main-conatiner">
+                            <div class="daywise-heading-container">
+                                <h1 class="day-wise-heading">Day 05: Colombo – Airport</h1>
+                            </div>
+                            <div>
+                                <ul class="list-style mr-5 pt-1">
+                                    <li>Breakfast At The Hotel: (Enjoy your final breakfast in Sri Lanka before check-out).</li>
+                                    <li>Colombo City Tour (En Route To The Airport).</li>
+                                    <li>Explore key attractions in the commercial capital of Sri Lanka: (Galle Face Green, Hindu kovil, Viharamahadevi Park, National Museum, Twin World Trade Center towers, Old Parliament Building, Fort district, Independence Hall at Independence Square, Prominent places of worship: Buddhist, Hindu, Islamic, and Christian).</li>
+                                    <li>(Entrance fees to sites are not included).</li>
+                                    <li>Shopping In Colombo (Time permitting).</li>
+                                    <li>Visit popular shopping destinations: (Odel, House of Fashion, Beverly Street, Majestic City, Noritake showroom).</li>
+                                    <li>Transfer To Bandaranaike International Airport: (Proceed to the airport for your departure flight, End of a memorable Sri Lankan tour).</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="sectionInclusionExclusion">
+                    <div class="inclusion-exclusion-container">
+                        <div class="card-flow-conatiner">
+                            <div class="inclusions-container">
+                                <h1 class="inclusions-heading">Inclusions</h1>
+                                <ul class="inclusins-list-style mr-5 pt-1">
+                                    <li>Pick up & Drop at Colombo Airport</li>
+                                    <li>Meeting arrangements at the airport on arrival and departure</li>
+                                    <li>Transfers in an exclusive air conditioned vehicle as per Group Size with English Speaking Chauffeur Guide (See vehicle pictures in end)</li>
+                                    <li>Hotel Accommodation as per selected Category</li>
+                                    <li>HB (Half Board) includes Breakfast and Dinner</li>
+                                    <li>The above are net and include all Sri Lanka government taxes</li>
+                                    <li>Entrance to Cultural Show in Kandy is included if you visit the Gem Museum</li>
+                                    <li>GST Included</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="exclusions-container">
+                            <h1 class="inclusions-heading">Exclusions</h1>
+                            <ul class="inclusins-list-style mr-5 pt-1">
+                                <li>Any Airfare to Colombo</li>
+                                <li>Entrance Charges to Monuments & any water activity charges (Entrance Charges are given in the end)</li>
+                                <li>Expenses of personal nature such as tipping, porters, laundry, telephones, etc</li>
+                                <li>TCS 5% of Indian Govt</li>
+                                <li>Remittance Charges if USD payment is remitted to Sri Lanka</li>
+                                <li>Any Hotel Charge, like early check in or late check out or any damage related charges collected by hotel</li>
+                                <li>Any Late Night Charges before 8 am and after 7 pm or deviation from itinerary ( to be agreed & Paid to driver directly)</li>
+                                <li>Any damages caused by guest / corporate to hotel property or item while at a stay, the guest/ corporate will have to settle the charges of the claim made by the hotel directly. Travel agents will not be liable for any claims made by guests or hotel</li>
+                                <li>Travel agent will not be liable for any lost/stolen items of guest/hotel</li>
+                                <li>Health & medical conditions of the guest will be at his/her own risk</li>
+                                <li>Visa Charges ( visit www.eta.gov.lk for more info on visa )</li>
+                                <li>Cancellation charges may apply according to hotel terms and conditions</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="sectionTermsConditionsContainer">
+                    <div class="shadow terms-conditions-cards-container">
+                        <h1 class="terms-conditions-heading">TERMS AND CONDITIONS </h1>
+                        <ul class="terms-conditions-style">
+
+                        <li>Hotel Check-In/Out: Standard check-in is between 2:00–3:00 PM; check-out by 12:00 PM. Early check-in/late check-out is subject to availability and may incur additional charges.</li>
+                        <li>Bookings & Availability: All bookings are subject to availability. Airfares are dynamic and may change at the time of booking.</li>
+                        <li>Transfers: Pick-ups between 7:30 PM to 6:30 AM may have extra charges.</li>
+                        <li>Room Policy: Max two adults per room. Triple occupancy may involve roll-away beds.</li>
+                        <li>Child Policy: Children 10+ years are charged as adults by hotels.</li>
+                        <li>Hotel Preferences: We recommend reviewing hotel photos and reviews before confirming. Changes are subject to hotel cancellation policies.</li>
+                        <li>Damage & Liability: Any damage to hotel/transport during the trip is the traveler’s responsibility.</li>
+                        <li>Passport & Visa: Passport must be valid for at least 6 months. Visa on arrival is subject to immigration discretion.</li>
+                        <li>Flights: Airfare changes/cancellations are per airline policy. Name errors will incur amendment fees. Buzz Holidayz is not liable for delays or changes by airlines.</li>
+                        <li>Meals: All Indian meals are fixed-menu; no à la carte.</li>
+                        <li>Itinerary Changes: Company reserves rights to modify the itinerary due to weather, closures, or unforeseen events. Unused services are non-refundable.</li>
+                        <li>Sightseeing: Tours depend on local conditions. No refunds for missed visits due to closures or delays.</li>
+                        <li>Refunds: Processed within 20 working days. Payment gateway fees (2.5%–6%) are non-refundable.</li>
+                        <li>Payment Terms: Online payments incur transaction charges. Ensure correct name/spelling as per passport while booking.</li>
+                        <li>Behavior: Avoid overconsumption of alcohol during travel, especially during immigration procedures.</li>
+                        <li>Cancellation Policy: All changes/cancellations must be in writing. Charges apply as per Buzz Holidayz and vendor policies.</li>
+                        <li>Responsibility: Buzz Holidayz is not liable for delays, losses, or events beyond control (e.g. weather, strikes, natural calamities).</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-12 col-md-3 second-container">
+                <div class="enquery-card">
+                    <div class="small-price-card-container">
+                        <p class="starting-form">Starting From</p>
+                        <div class="d-flex flex-row">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="24" fill="currentColor" class=" rs-icon1 bi bi-currency-rupee" viewBox="0 0 16 16">
+                                <path d="M4 3.06h2.726c1.22 0 2.12.575 2.325 1.724H4v1.051h5.051C8.855 7.001 8 7.558 6.788 7.558H4v1.317L8.437 14h2.11L6.095 8.884h.855c2.316-.018 3.465-1.476 3.688-3.049H12V4.784h-1.345c-.08-.778-.357-1.335-.793-1.732H12V2H4z" />
+                            </svg>
+                            <p class="real-price">34,999/-*</p>
+                        </div>
+
+                        <div class="d-flex flex-row">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="17" height="30" fill="currentColor" class="rs-icon2 bi bi-currency-rupee" viewBox="0 0 16 16">
+                                <path d="M4 3.06h2.726c1.22 0 2.12.575 2.325 1.724H4v1.051h5.051C8.855 7.001 8 7.558 6.788 7.558H4v1.317L8.437 14h2.11L6.095 8.884h.855c2.316-.018 3.465-1.476 3.688-3.049H12V4.784h-1.345c-.08-.778-.357-1.335-.793-1.732H12V2H4z" />
+                            </svg>
+                            <h1 class="low-price">29,999/-* <span class="per-person">Per Person</span></h1>
+                        </div>
+                    </div>
+
+                    <div>
+                        <!-- Open popup button -->
+                        <label for="popup-toggle" class="open-popup">Enquiry Now</label>
+
+                        <!-- Hidden checkbox to toggle popup -->
+                        <input type="checkbox" id="popup-toggle" />
+
+                        <!-- Popup structure -->
+                        <div class="popup-overlay">
+                            <div class="popup">
+                                <label for="popup-toggle" class="close-btn">&times;</label>
+                                <h2 class="main-popup-heading">Want to Go For A Memorable Holiday?</h2>
+                                <form id="enquiryForm">
+    <div class="d-flex flex-row justify-content-center">
+    <input type="text" id="name" placeholder="Your Name" required />
+    <input type="text" id="mobile" placeholder="Your Mobile No" required class="ml-2" />
+  </div>
+  <input type="email" id="email" placeholder="Your Email" required />
+  <input type="text" id="travelDate" placeholder="Date Of Travel" required />
+
+  <div>
+    <label for="flights">Flights Required</label>
+    <select id="flights" class="form-control">
+      <option>Yes</option>
+      <option>No</option>
+    </select>
+  </div>
+
+        <div>
+    <label for="bookingTime">When you planning to book</label>
+    <select id="bookingTime" class="form-control">
+      <option>Immediately</option>
+      <option>Within a week</option>
+      <option>Within a month</option>
+    </select>
+  </div>
+
+  <div>
+    <label for="planning">Trip Planning Status</label>
+    <select id="planning" class="form-control">
+      <option>Definitely going-planning in progress</option>
+      <option>Considering a trip–not yet decided</option>
+      <option>Just researching–will plan later</option>
+    </select>
+  </div>
+
+  <div class="d-flex flex-row justify-content-center">
+    <input type="text" id="adult" placeholder="Adult" required />
+    <input type="text" id="child" placeholder="Child" required class="ml-2" />
+    <input type="text" id="infant" placeholder="Infant" required class="ml-2" />
+  </div>
+
+  <textarea id="message" rows="4" placeholder="Your Message" required></textarea>
+
+  <button class="submit-button" type="button" onclick="sendWhatsApp()">Submit</button>
+</form>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="inclusions-duration-container  pt-2">
+                    <div class="d-flex flex-row">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="17" fill="currentColor" class="mr-2 ml-2 bi bi-alarm" viewBox="0 0 16 16">
+                            <path d="M8.5 5.5a.5.5 0 0 0-1 0v3.362l-1.429 2.38a.5.5 0 1 0 .858.515l1.5-2.5A.5.5 0 0 0 8.5 9z" />
+                            <path d="M6.5 0a.5.5 0 0 0 0 1H7v1.07a7.001 7.001 0 0 0-3.273 12.474l-.602.602a.5.5 0 0 0 .707.708l.746-.746A6.97 6.97 0 0 0 8 16a6.97 6.97 0 0 0 3.422-.892l.746.746a.5.5 0 0 0 .707-.708l-.601-.602A7.001 7.001 0 0 0 9 2.07V1h.5a.5.5 0 0 0 0-1zm1.038 3.018a6 6 0 0 1 .924 0 6 6 0 1 1-.924 0M0 3.5c0 .753.333 1.429.86 1.887A8.04 8.04 0 0 1 4.387 1.86 2.5 2.5 0 0 0 0 3.5M13.5 1c-.753 0-1.429.333-1.887.86a8.04 8.04 0 0 1 3.527 3.527A2.5 2.5 0 0 0 13.5 1" />
+                        </svg>
+                        <p class="duration-heading"><span class="span-duration">Duration</span> :4 Nights & 5 Days</p>
+                    </div>
+
+                    <div class="line-with-button">
+                        <hr />
+                        <button class="center-button">Package Includes</button>
+                    </div>
+
+                    <div class="ml-4">
+                        <div class="d-flex flex-row">
+                            <div class="hotel-icon-cont">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="icons-style bi bi-buildings-fill" viewBox="0 0 16 16">
+                                    <path d="M15 .5a.5.5 0 0 0-.724-.447l-8 4A.5.5 0 0 0 6 4.5v3.14L.342 9.526A.5.5 0 0 0 0 10v5.5a.5.5 0 0 0 .5.5h9a.5.5 0 0 0 .5-.5V14h1v1.5a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5zM2 11h1v1H2zm2 0h1v1H4zm-1 2v1H2v-1zm1 0h1v1H4zm9-10v1h-1V3zM8 5h1v1H8zm1 2v1H8V7zM8 9h1v1H8zm2 0h1v1h-1zm-1 2v1H8v-1zm1 0h1v1h-1zm3-2v1h-1V9zm-1 2h1v1h-1zm-2-4h1v1h-1zm3 0v1h-1V7zm-2-2v1h-1V5zm1 0h1v1h-1z" />
+                                </svg>
+                                <p class="inclusion-name">Hotel</p>
+                            </div>
+                            <div>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="26" fill="currentColor" class="icon-byno ml-3 bi bi-binoculars" viewBox="0 0 16 16">
+                                    <path d="M3 2.5A1.5 1.5 0 0 1 4.5 1h1A1.5 1.5 0 0 1 7 2.5V5h2V2.5A1.5 1.5 0 0 1 10.5 1h1A1.5 1.5 0 0 1 13 2.5v2.382a.5.5 0 0 0 .276.447l.895.447A1.5 1.5 0 0 1 15 7.118V14.5a1.5 1.5 0 0 1-1.5 1.5h-3A1.5 1.5 0 0 1 9 14.5v-3a.5.5 0 0 1 .146-.354l.854-.853V9.5a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v.793l.854.853A.5.5 0 0 1 7 11.5v3A1.5 1.5 0 0 1 5.5 16h-3A1.5 1.5 0 0 1 1 14.5V7.118a1.5 1.5 0 0 1 .83-1.342l.894-.447A.5.5 0 0 0 3 4.882zM4.5 2a.5.5 0 0 0-.5.5V3h2v-.5a.5.5 0 0 0-.5-.5zM6 4H4v.882a1.5 1.5 0 0 1-.83 1.342l-.894.447A.5.5 0 0 0 2 7.118V13h4v-1.293l-.854-.853A.5.5 0 0 1 5 10.5v-1A1.5 1.5 0 0 1 6.5 8h3A1.5 1.5 0 0 1 11 9.5v1a.5.5 0 0 1-.146.354l-.854.853V13h4V7.118a.5.5 0 0 0-.276-.447l-.895-.447A1.5 1.5 0 0 1 12 4.882V4h-2v1.5a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5zm4-1h2v-.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5zm4 11h-4v.5a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5zm-8 0H2v.5a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5z" />
+                                </svg>
+                                <p class="inclusion-name mr-2">Sightseeing</p>
+                            </div>
+                            <div>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="ml-3 icons-style bi bi-car-front" viewBox="0 0 16 16">
+                                    <path d="M4 9a1 1 0 1 1-2 0 1 1 0 0 1 2 0m10 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0M6 8a1 1 0 0 0 0 2h4a1 1 0 1 0 0-2zM4.862 4.276 3.906 6.19a.51.51 0 0 0 .497.731c.91-.073 2.35-.17 3.597-.17s2.688.097 3.597.17a.51.51 0 0 0 .497-.731l-.956-1.913A.5.5 0 0 0 10.691 4H5.309a.5.5 0 0 0-.447.276" />
+                                    <path d="M2.52 3.515A2.5 2.5 0 0 1 4.82 2h6.362c1 0 1.904.596 2.298 1.515l.792 1.848c.075.175.21.319.38.404.5.25.855.715.965 1.262l.335 1.679q.05.242.049.49v.413c0 .814-.39 1.543-1 1.997V13.5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1-.5-.5v-1.338c-1.292.048-2.745.088-4 .088s-2.708-.04-4-.088V13.5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1-.5-.5v-1.892c-.61-.454-1-1.183-1-1.997v-.413a2.5 2.5 0 0 1 .049-.49l.335-1.68c.11-.546.465-1.012.964-1.261a.8.8 0 0 0 .381-.404l.792-1.848ZM4.82 3a1.5 1.5 0 0 0-1.379.91l-.792 1.847a1.8 1.8 0 0 1-.853.904.8.8 0 0 0-.43.564L1.03 8.904a1.5 1.5 0 0 0-.03.294v.413c0 .796.62 1.448 1.408 1.484 1.555.07 3.786.155 5.592.155s4.037-.084 5.592-.155A1.48 1.48 0 0 0 15 9.611v-.413q0-.148-.03-.294l-.335-1.68a.8.8 0 0 0-.43-.563 1.8 1.8 0 0 1-.853-.904l-.792-1.848A1.5 1.5 0 0 0 11.18 3z" />
+                                </svg>
+                                <p class="inclusion-name ml-2">Transfer</p>
+                            </div>
+                            <div>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class=" icons-style bi bi-fork-knife" viewBox="0 0 16 16">
+                                    <path d="M13 .5c0-.276-.226-.506-.498-.465-1.703.257-2.94 2.012-3 8.462a.5.5 0 0 0 .498.5c.56.01 1 .13 1 1.003v5.5a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5zM4.25 0a.25.25 0 0 1 .25.25v5.122a.128.128 0 0 0 .256.006l.233-5.14A.25.25 0 0 1 5.24 0h.522a.25.25 0 0 1 .25.238l.233 5.14a.128.128 0 0 0 .256-.006V.25A.25.25 0 0 1 6.75 0h.29a.5.5 0 0 1 .498.458l.423 5.07a1.69 1.69 0 0 1-1.059 1.711l-.053.022a.92.92 0 0 0-.58.884L6.47 15a.971.971 0 1 1-1.942 0l.202-6.855a.92.92 0 0 0-.58-.884l-.053-.022a1.69 1.69 0 0 1-1.059-1.712L3.462.458A.5.5 0 0 1 3.96 0z" />
+                                </svg>
+                                <p class="inclusion-name">Meal</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="contact-container d-flex flex-row">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class=" ml-2 mr-2 contact-img bi bi-person-lines-fill" viewBox="0 0 16 16">
+                        <path d="M6 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m-5 6s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zM11 3.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5m.5 2.5a.5.5 0 0 0 0 1h4a.5.5 0 0 0 0-1zm2 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1zm0 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1z" />
+                    </svg>
+
+                    <P class="contact-number"><span class="span-ready">Need Help?</span><br />
+                        Call us : 8886008060 | 8886872872 <br />
+                        Mail us : sales@buzzholidayz.com <br />
+                    </P>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div>
+        <div class="fixed-button-container" id="submittSection">
+            <a href="https://api.whatsapp.com/send?phone=919160895608&text=Hi%20%2C%20I%20just%20saw%20your%20ad%20on%20the%20bali%20packages%20and%20wanted%20to%20know%20more." target="_blank">
+                <img src="https://res.cloudinary.com/dlcuxbo8m/image/upload/v1747737439/Circle_Whatsapp_logotype_icon_Social_media_app_Network_application_Popular_editorial_brand_Vector_illustration___Premium_Vector_ztafii.jpg" alt="">
+            </a>
+        </div>
+    </div>
+
+
+
+
+    <script type="text/javascript" src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-static-website/js/ccbp-ui-kit.js">
+
+    </script>
+
+
+    </div>
+    <script>
+function sendWhatsApp() {
+    const name = document.getElementById("name").value;
+    const mobile = document.getElementById("mobile").value;
+    const email = document.getElementById("email").value;
+    const travelDate = document.getElementById("travelDate").value;
+    const flights = document.getElementById("flights").value;
+    const bookingTime = document.getElementById("bookingTime").value;
+    const planning = document.getElementById("planning").value;
+    const adult = document.getElementById("adult").value;
+    const child = document.getElementById("child").value;
+    const infant = document.getElementById("infant").value;
+    const message = document.getElementById("message").value;
+
+    const fullMessage = `Hi, I would like to enquire about the holiday package. 
+Name: ${name}
+Mobile: ${mobile}
+Email: ${email}
+Date of Travel: ${travelDate}
+Flights Required: ${flights}
+Booking Time: ${bookingTime}
+Planning Status: ${planning}
+Adults: ${adult}, Children: ${child}, Infants: ${infant}
+Message: ${message}`;
+
+    const url = `https://api.whatsapp.com/send?phone=919160895608&text=${encodeURIComponent(fullMessage)}`;
+    window.open(url, '_blank');
+}
+</script>
+
+
+
+
+
+
+
+
+<div>
+    <div class="shadow footer-container">
+
+        <div class="footer-section">
+            <img src="https://res.cloudinary.com/dlcuxbo8m/image/upload/v1747807476/buzz_holidays-removebg-preview_apjhtk.png" alt="Buzz Holidays Logo">
+        </div>
+
+        <div class="footer-section">
+            <div class="footer-title">Products</div>
+            <div class="footer-item">Search Flights</div>
+            <div class="footer-item">Search Hotels</div>
+            <div class="footer-item">Search Buses</div>
+        </div>
+
+        <div class="footer-section">
+            <div class="footer-title">Terms & Conditions</div>
+            <div class="footer-item">Privacy Policy</div>
+            <div class="footer-item">About Us</div>
+            <div class="footer-item">Cancellation & Visa Policy</div>
+        </div>
+
+        <div class="footer-section">
+            <div class="footer-title">Contact Info</div>
+            <div class="footer-item">sales@buzzholidayz.com</div>
+            <div class="footer-item">+91 88868 72872</div>
+            <div class="footer-item">+91 88860 08060</div>
+        </div>
+
+        <div class="footer-section">
+            <div class="footer-title">Follow Us</div>
+            <div class="social-icons">
+                <!-- Facebook -->
+                <a href="https://www.facebook.com/share/1YoCehQkw2/" target="_blank">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+                        <path d="M16 8.049A8 8 0 1 0 7.25 15.96v-5.625h-2.03V8.05H7.25V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218L11.615 10.335H9.75V16A8 8 0 0 0 16 8.049Z" />
+                    </svg>
+                </a>
+                <!-- Instagram -->
+                <a href="https://www.instagram.com/buzzholidayz_and_buzzforex?igsh=d2RnODk2dTcyNm1k" target="_blank">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+                        <path d="M8 0C5.8 0 5.5.01 4.7.05c-.8.03-1.3.17-1.8.37A3.9 3.9 0 0 0 .42 2.76c-.2.5-.34 1-.37 1.8C.01 5.6 0 5.83 0 8c0 2.2.01 2.44.05 3.3.03.8.17 1.3.37 1.8a3.9 3.9 0 0 0 .93 1.42 3.9 3.9 0 0 0 1.42.93c.5.2 1 .34 1.8.37.85.04 1.12.05 3.3.05s2.44-.01 3.3-.05c.8-.03 1.3-.17 1.8-.37a3.9 3.9 0 0 0 1.42-.93 3.9 3.9 0 0 0 .93-1.42c.2-.5.34-1 .37-1.8.04-.85.05-1.12.05-3.3s-.01-2.44-.05-3.3c-.03-.8-.17-1.3-.37-1.8A3.9 3.9 0 0 0 13.24.42a3.9 3.9 0 0 0-1.42-.93c-.5-.2-1-.34-1.8-.37C10.4.01 10.2 0 8 0ZM8 5.44A2.67 2.67 0 1 1 8 10.78 2.67 2.67 0 0 1 8 5.44Zm4.27-1.67a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92Z" />
+                    </svg>
+                </a>
+                <!-- youtube -->
+                <a href="https://youtube.com/@buzzgroups-stk4166?si=unW1VFiZRcetpLMZ" target="_blank">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" class="youtube-icon" viewBox="0 0 576 512" fill="currentColor">
+                        <path d="M549.655 124.083C534.73 80.75 494.126 50.936 448 48.54 393.042 45.89 288 45.89 288 45.89s-105.042 0-160 2.65c-46.126 2.396-86.73 32.21-101.655 75.543C16 169.67 16 256 16 256s0 86.33 10.345 131.917C45.27 431.25 85.874 461.064 132 463.46c54.958 2.65 160 2.65 160 2.65s105.042 0 160-2.65c46.126-2.396 86.73-32.21 101.655-75.543C560 342.33 560 256 560 256s0-86.33-10.345-131.917zM232 336V176l142 80-142 80z" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+
+
+
+        <div class="footer-bottom">
+            © 2023 by STK FOREX & LEISURE PRIVATE LIMITED - All Rights Reserved
+        </div>
+    </div>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
+
