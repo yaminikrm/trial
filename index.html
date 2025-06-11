@@ -153,17 +153,23 @@ src="https://www.facebook.com/tr?id=1442638756736926&ev=PageView&noscript=1"
       .card {
         flex: 1 1 calc(50% - 20px);
       }
-      .home-heading {
+
+      .header-container {
+         margin-top: 10px; /* Reduced spacing */
+         gap: 5px; /* Reduce gap between logo and heading */
+     }
+
+     .home-heading {
         font-size: 2rem;
         letter-spacing: 1.5px;
         text-align: center;
-        
-      }
-      .company-logo {
-        width: 180px;
-         left: 10px;
-          padding-bottom: 50px;
-      }
+    }
+
+    .company-logo {
+       width: 160px;
+       padding-bottom: 10px; /* Optional: adjust or remove */
+    }
+
     }
 
     @media (max-width: 480px) {
@@ -172,14 +178,23 @@ src="https://www.facebook.com/tr?id=1442638756736926&ev=PageView&noscript=1"
         max-width: 100%;
       
       }
-      .home-heading {
-         font-size: 1.5rem;
-         letter-spacing: 1px;
-        
-      }
-      .company-logo {
-    width: 160px;
+
+
+    .header-container {
+    margin-top: 5px; /* Even less space for very small devices */
+    gap: 3px;
   }
+
+  .home-heading {
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+  }
+
+  .company-logo {
+    width: 140px;
+    padding-bottom: 5px;
+  }
+    
     }
   </style>
 </head>
