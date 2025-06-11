@@ -59,18 +59,19 @@ src="https://www.facebook.com/tr?id=1442638756736926&ev=PageView&noscript=1"
 
     .header-container {
       display: flex;
+      flex-direction: column;
       align-items: center;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 20px;
-      text-align: center;
+      gap: 10px;
+      margin-top: 20px;
+      position: relative;
+     
     }
 
     .company-logo {
-      position: absolute;
-      left: 20px;
-      width: 160px;
+      width: 140px;
       height: auto;
+      position: static; /* Remove absolute positioning */
+    
     }
 
     .home-heading {
@@ -154,7 +155,8 @@ src="https://www.facebook.com/tr?id=1442638756736926&ev=PageView&noscript=1"
       }
       .home-heading {
         font-size: 2rem;
-        letter-spacing: 2px;
+        letter-spacing: 1.5px;
+        text-align: center;
         
       }
       .company-logo {
@@ -171,8 +173,13 @@ src="https://www.facebook.com/tr?id=1442638756736926&ev=PageView&noscript=1"
       
       }
       .home-heading {
-        font-size: 1.6rem;
+         font-size: 1.5rem;
+         letter-spacing: 1px;
+        
       }
+      .company-logo {
+    width: 120px;
+  }
     }
   </style>
 </head>
