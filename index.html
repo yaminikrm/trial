@@ -2,14 +2,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="style.css">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-       <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Responsive Cards</title>
+
 <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -35,341 +31,207 @@ fbq('track', 'PageView');
 src="https://www.facebook.com/tr?id=1442638756736926&ev=PageView&noscript=1"
 /></noscript>
 <!-- End Meta Pixel Code -->
+
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: sans-serif;
+      background: #f3f4f6;
+    }
+
+    .exotic-bg-container {
+      background-image: url("https://res.cloudinary.com/dlcuxbo8m/image/upload/v1748604832/OCEAN_mpcgr3.jpg");
+      background-size: cover;
+      background-position: center;
+      min-height: 100vh;
+      padding: 40px 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 30px;
+    }
+
+    .header-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+      text-align: center;
+    }
+
+    .company-logo {
+      position: absolute;
+      left: 20px;
+      width: 160px;
+      height: auto;
+    }
+
+    .home-heading {
+      font-size: 2.8rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      color: #ffffff;
+      letter-spacing: 3px;
+      text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
+      font-style: italic;
+        text-align: center;
+
+    }
+
+    .card-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      max-width: 1400px;
+      width: 100%;
+    }
+
+    .card {
+      flex: 1 1 calc(20% - 20px);
+      max-width: 280px;
+      height: 360px;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+
+    .card.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .card img {
+      width: 100%;
+      height: 330px;
+      object-fit: cover;
+      transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    }
+
+    .card img:hover {
+      transform: scale(1.1) rotate(5deg);
+      opacity: 0.9;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .card-content {
+      padding-top: 2px;
+      padding-bottom: 2px;
+      text-align: center;
+    }
+
+    .card-content h3 {
+      margin: 0;
+      font-size: 1.1rem;
+    }
+
+    @media (max-width: 1200px) {
+      .card {
+        flex: 1 1 calc(25% - 20px);
+      }
+    }
+
+    @media (max-width: 992px) {
+      .card {
+        flex: 1 1 calc(33.33% - 20px);
+      }
+    }
+
+    @media (max-width: 768px) {
+      .card {
+        flex: 1 1 calc(50% - 20px);
+      }
+      .home-heading {
+        font-size: 2rem;
+        letter-spacing: 2px;
+      }
+      .company-logo {
+        width: 140px;
+         left: 10px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .card {
+        flex: 1 1 100%;
+        max-width: 100%;
+      }
+      .home-heading {
+        font-size: 1.6rem;
+      }
+    }
+  </style>
 </head>
 <body>
-    <!-- End Google Tag Manager --><!-- Google Tag Manager (noscript) -->
+
+ <!-- End Google Tag Manager --><!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NGXT9RKK"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
-    <div>
 
- <img src="https://res.cloudinary.com/dlcuxbo8m/image/upload/v1749032655/Untitled_design_26_guxyxq.png" class="bali-bg-img1" />
-
-    <div class="cards-bg-container1">
-        <h1 class="bali-pkg-heading1">BALI</h1>
-        <div class="">
-            <div class="container">
-                <div class="row">
-                    <div class="col-12 col-md-4">
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-12">
-                                    <div class="cards-container1">
-                                        <div class="text-center">
-                                            <img src="https://res.cloudinary.com/dlcuxbo8m/image/upload/v1747215291/Famous_spot_in_Bali_%EF%B8%8F_wggaol.jpg" class="card-img-icon1" alt="...">
-                                        </div>
-                                        <div class="text-center">
-                                            <button class="days-button">4 Nights / 5 Days</button>
-                                            <p class="validity">Validity : September 2025</p>
-                                            <div>
-                                                <div class="container">
-                                                    <div class="row">
-                                                        <div class="col-3 col-md-2 adjustment-inclusions-icons">
-                                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="icons-style1 bi bi-buildings-fill" viewBox="0 0 16 16">
-                                                                <path d="M15 .5a.5.5 0 0 0-.724-.447l-8 4A.5.5 0 0 0 6 4.5v3.14L.342 9.526A.5.5 0 0 0 0 10v5.5a.5.5 0 0 0 .5.5h9a.5.5 0 0 0 .5-.5V14h1v1.5a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5zM2 11h1v1H2zm2 0h1v1H4zm-1 2v1H2v-1zm1 0h1v1H4zm9-10v1h-1V3zM8 5h1v1H8zm1 2v1H8V7zM8 9h1v1H8zm2 0h1v1h-1zm-1 2v1H8v-1zm1 0h1v1h-1zm3-2v1h-1V9zm-1 2h1v1h-1zm-2-4h1v1h-1zm3 0v1h-1V7zm-2-2v1h-1V5zm1 0h1v1h-1z" />
-                                                            </svg>
-                                                            <p class="inclusion-name1 ml-2">Hotel</p>
-                                                        </div>
-
-                                                        <div class="col-3 col-md-2 adjustment-inclusions-icons-site">
-                                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="icons-style1 ml-2 bi bi-binoculars" viewBox="0 0 16 16">
-                                                                <path d="M3 2.5A1.5 1.5 0 0 1 4.5 1h1A1.5 1.5 0 0 1 7 2.5V5h2V2.5A1.5 1.5 0 0 1 10.5 1h1A1.5 1.5 0 0 1 13 2.5v2.382a.5.5 0 0 0 .276.447l.895.447A1.5 1.5 0 0 1 15 7.118V14.5a1.5 1.5 0 0 1-1.5 1.5h-3A1.5 1.5 0 0 1 9 14.5v-3a.5.5 0 0 1 .146-.354l.854-.853V9.5a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v.793l.854.853A.5.5 0 0 1 7 11.5v3A1.5 1.5 0 0 1 5.5 16h-3A1.5 1.5 0 0 1 1 14.5V7.118a1.5 1.5 0 0 1 .83-1.342l.894-.447A.5.5 0 0 0 3 4.882zM4.5 2a.5.5 0 0 0-.5.5V3h2v-.5a.5.5 0 0 0-.5-.5zM6 4H4v.882a1.5 1.5 0 0 1-.83 1.342l-.894.447A.5.5 0 0 0 2 7.118V13h4v-1.293l-.854-.853A.5.5 0 0 1 5 10.5v-1A1.5 1.5 0 0 1 6.5 8h3A1.5 1.5 0 0 1 11 9.5v1a.5.5 0 0 1-.146.354l-.854.853V13h4V7.118a.5.5 0 0 0-.276-.447l-.895-.447A1.5 1.5 0 0 1 12 4.882V4h-2v1.5a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5zm4-1h2v-.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5zm4 11h-4v.5a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5zm-8 0H2v.5a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5z" />
-                                                            </svg>
-                                                            <p class="inclusion-name1 site-seeing-eidt">Sightseeing</p>
-                                                        </div>
-
-                                                        <div class="col-3 col-md-2 adjustment-inclusions-icons">
-                                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="icons-style1 bi bi-car-front" viewBox="0 0 16 16">
-                                                                <path d="M4 9a1 1 0 1 1-2 0 1 1 0 0 1 2 0m10 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0M6 8a1 1 0 0 0 0 2h4a1 1 0 1 0 0-2zM4.862 4.276 3.906 6.19a.51.51 0 0 0 .497.731c.91-.073 2.35-.17 3.597-.17s2.688.097 3.597.17a.51.51 0 0 0 .497-.731l-.956-1.913A.5.5 0 0 0 10.691 4H5.309a.5.5 0 0 0-.447.276" />
-                                                                <path d="M2.52 3.515A2.5 2.5 0 0 1 4.82 2h6.362c1 0 1.904.596 2.298 1.515l.792 1.848c.075.175.21.319.38.404.5.25.855.715.965 1.262l.335 1.679q.05.242.049.49v.413c0 .814-.39 1.543-1 1.997V13.5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1-.5-.5v-1.338c-1.292.048-2.745.088-4 .088s-2.708-.04-4-.088V13.5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1-.5-.5v-1.892c-.61-.454-1-1.183-1-1.997v-.413a2.5 2.5 0 0 1 .049-.49l.335-1.68c.11-.546.465-1.012.964-1.261a.8.8 0 0 0 .381-.404l.792-1.848ZM4.82 3a1.5 1.5 0 0 0-1.379.91l-.792 1.847a1.8 1.8 0 0 1-.853.904.8.8 0 0 0-.43.564L1.03 8.904a1.5 1.5 0 0 0-.03.294v.413c0 .796.62 1.448 1.408 1.484 1.555.07 3.786.155 5.592.155s4.037-.084 5.592-.155A1.48 1.48 0 0 0 15 9.611v-.413q0-.148-.03-.294l-.335-1.68a.8.8 0 0 0-.43-.563 1.8 1.8 0 0 1-.853-.904l-.792-1.848A1.5 1.5 0 0 0 11.18 3z" />
-                                                            </svg>
-                                                            <p class="inclusion-name1">Transfer</p>
-                                                        </div>
-
-                                                        <div class="col-3 col-md-2 adjustment-inclusions-icons">
-                                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="icons-style1 bi bi-fork-knife" viewBox="0 0 16 16">
-                                                                <path d="M13 .5c0-.276-.226-.506-.498-.465-1.703.257-2.94 2.012-3 8.462a.5.5 0 0 0 .498.5c.56.01 1 .13 1 1.003v5.5a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5zM4.25 0a.25.25 0 0 1 .25.25v5.122a.128.128 0 0 0 .256.006l.233-5.14A.25.25 0 0 1 5.24 0h.522a.25.25 0 0 1 .25.238l.233 5.14a.128.128 0 0 0 .256-.006V.25A.25.25 0 0 1 6.75 0h.29a.5.5 0 0 1 .498.458l.423 5.07a1.69 1.69 0 0 1-1.059 1.711l-.053.022a.92.92 0 0 0-.58.884L6.47 15a.971.971 0 1 1-1.942 0l.202-6.855a.92.92 0 0 0-.58-.884l-.053-.022a1.69 1.69 0 0 1-1.059-1.712L3.462.458A.5.5 0 0 1 3.96 0z" />
-                                                            </svg>
-                                                            <p class="inclusion-name1">Meal</p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <hr>
-
-                                        <div class="container">
-                                            <div class="row">
-                                                <div class="col-7 col-md-8">
-                                                    <p class="starting-from1">Starting From / Flights Extra</p>
-                                                    <div class="d-flex flex-row decoration-price">
-                                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="24" fill="currentColor" class="bi bi-currency-rupee" viewBox="0 0 16 16">
-                                                            <path d="M4 3.06h2.726c1.22 0 2.12.575 2.325 1.724H4v1.051h5.051C8.855 7.001 8 7.558 6.788 7.558H4v1.317L8.437 14h2.11L6.095 8.884h.855c2.316-.018 3.465-1.476 3.688-3.049H12V4.784h-1.345c-.08-.778-.357-1.335-.793-1.732H12V2H4z" />
-                                                        </svg>
-                                                        <P class="price1">39,999/-*</P>
-                                                    </div>
-
-                                                    <div class="d-flex flex-row">
-                                                        <svg xmlns="http://www.w3.org/2000/svg" width="17" height="30" fill="currentColor" class="bi bi-currency-rupee symbol-style" viewBox="0 0 16 16">
-                                                            <path d="M4 3.06h2.726c1.22 0 2.12.575 2.325 1.724H4v1.051h5.051C8.855 7.001 8 7.558 6.788 7.558H4v1.317L8.437 14h2.11L6.095 8.884h.855c2.316-.018 3.465-1.476 3.688-3.049H12V4.784h-1.345c-.08-.778-.357-1.335-.793-1.732H12V2H4z" />
-                                                        </svg>
-                                                        <P class="price2">34,999/-*</P>
-                                                    </div>
-
-                                                </div>
-                                                <div class="col-2col-md-2">
-                                                    <a href="bali1.html">   
-                                                    <button class="view-package-button">View Package</button>
-                                                    </a>
-                                                </div>
-
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-12 col-md-4">
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-12">
-                                    <div class="cards-container1">
-                                        <div class="text-center">
-                                            <img src="https://res.cloudinary.com/dlcuxbo8m/image/upload/v1747313039/download_46_mcy4nm.jpg" class="card-img-icon1" alt="...">
-                                        </div>
-                                        <div class="text-center">
-                                            <button class="days-button">5 Nights / 6 Days</button>
-                                            <p class="validity">Validity : September 2025</p>
-                                            <div>
-                                                <div class="container">
-                                                    <div class="row">
-                                                        <div class="col-3 col-md-2 adjustment-inclusions-icons">
-                                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="icons-style1 bi bi-buildings-fill" viewBox="0 0 16 16">
-                                                                <path d="M15 .5a.5.5 0 0 0-.724-.447l-8 4A.5.5 0 0 0 6 4.5v3.14L.342 9.526A.5.5 0 0 0 0 10v5.5a.5.5 0 0 0 .5.5h9a.5.5 0 0 0 .5-.5V14h1v1.5a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5zM2 11h1v1H2zm2 0h1v1H4zm-1 2v1H2v-1zm1 0h1v1H4zm9-10v1h-1V3zM8 5h1v1H8zm1 2v1H8V7zM8 9h1v1H8zm2 0h1v1h-1zm-1 2v1H8v-1zm1 0h1v1h-1zm3-2v1h-1V9zm-1 2h1v1h-1zm-2-4h1v1h-1zm3 0v1h-1V7zm-2-2v1h-1V5zm1 0h1v1h-1z" />
-                                                            </svg>
-                                                            <p class="inclusion-name1">Hotel</p>
-                                                        </div>
-                                                        <div class="col-3 col-md-2 adjustment-inclusions-icons-site">
-                                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="icons-style1 ml-2 bi bi-binoculars" viewBox="0 0 16 16">
-                                                                <path d="M3 2.5A1.5 1.5 0 0 1 4.5 1h1A1.5 1.5 0 0 1 7 2.5V5h2V2.5A1.5 1.5 0 0 1 10.5 1h1A1.5 1.5 0 0 1 13 2.5v2.382a.5.5 0 0 0 .276.447l.895.447A1.5 1.5 0 0 1 15 7.118V14.5a1.5 1.5 0 0 1-1.5 1.5h-3A1.5 1.5 0 0 1 9 14.5v-3a.5.5 0 0 1 .146-.354l.854-.853V9.5a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v.793l.854.853A.5.5 0 0 1 7 11.5v3A1.5 1.5 0 0 1 5.5 16h-3A1.5 1.5 0 0 1 1 14.5V7.118a1.5 1.5 0 0 1 .83-1.342l.894-.447A.5.5 0 0 0 3 4.882zM4.5 2a.5.5 0 0 0-.5.5V3h2v-.5a.5.5 0 0 0-.5-.5zM6 4H4v.882a1.5 1.5 0 0 1-.83 1.342l-.894.447A.5.5 0 0 0 2 7.118V13h4v-1.293l-.854-.853A.5.5 0 0 1 5 10.5v-1A1.5 1.5 0 0 1 6.5 8h3A1.5 1.5 0 0 1 11 9.5v1a.5.5 0 0 1-.146.354l-.854.853V13h4V7.118a.5.5 0 0 0-.276-.447l-.895-.447A1.5 1.5 0 0 1 12 4.882V4h-2v1.5a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5zm4-1h2v-.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5zm4 11h-4v.5a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5zm-8 0H2v.5a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5z" />
-                                                            </svg>
-                                                            <p class="inclusion-name1 site-seeing-edit mr-5">Sightseeing</p>
-                                                        </div>
-                                                        <div class="col-3 col-md-2 adjustment-inclusions-icons">
-                                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="icons-style1 bi bi-car-front" viewBox="0 0 16 16">
-                                                                <path d="M4 9a1 1 0 1 1-2 0 1 1 0 0 1 2 0m10 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0M6 8a1 1 0 0 0 0 2h4a1 1 0 1 0 0-2zM4.862 4.276 3.906 6.19a.51.51 0 0 0 .497.731c.91-.073 2.35-.17 3.597-.17s2.688.097 3.597.17a.51.51 0 0 0 .497-.731l-.956-1.913A.5.5 0 0 0 10.691 4H5.309a.5.5 0 0 0-.447.276" />
-                                                                <path d="M2.52 3.515A2.5 2.5 0 0 1 4.82 2h6.362c1 0 1.904.596 2.298 1.515l.792 1.848c.075.175.21.319.38.404.5.25.855.715.965 1.262l.335 1.679q.05.242.049.49v.413c0 .814-.39 1.543-1 1.997V13.5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1-.5-.5v-1.338c-1.292.048-2.745.088-4 .088s-2.708-.04-4-.088V13.5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1-.5-.5v-1.892c-.61-.454-1-1.183-1-1.997v-.413a2.5 2.5 0 0 1 .049-.49l.335-1.68c.11-.546.465-1.012.964-1.261a.8.8 0 0 0 .381-.404l.792-1.848ZM4.82 3a1.5 1.5 0 0 0-1.379.91l-.792 1.847a1.8 1.8 0 0 1-.853.904.8.8 0 0 0-.43.564L1.03 8.904a1.5 1.5 0 0 0-.03.294v.413c0 .796.62 1.448 1.408 1.484 1.555.07 3.786.155 5.592.155s4.037-.084 5.592-.155A1.48 1.48 0 0 0 15 9.611v-.413q0-.148-.03-.294l-.335-1.68a.8.8 0 0 0-.43-.563 1.8 1.8 0 0 1-.853-.904l-.792-1.848A1.5 1.5 0 0 0 11.18 3z" />
-                                                            </svg>
-                                                            <p class="inclusion-name1">Transfer</p>
-                                                        </div>
-                                                        <div class="col-3 col-md-2 adjustment-inclusions-icons">
-                                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="icons-style1 bi bi-fork-knife" viewBox="0 0 16 16">
-                                                                <path d="M13 .5c0-.276-.226-.506-.498-.465-1.703.257-2.94 2.012-3 8.462a.5.5 0 0 0 .498.5c.56.01 1 .13 1 1.003v5.5a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5zM4.25 0a.25.25 0 0 1 .25.25v5.122a.128.128 0 0 0 .256.006l.233-5.14A.25.25 0 0 1 5.24 0h.522a.25.25 0 0 1 .25.238l.233 5.14a.128.128 0 0 0 .256-.006V.25A.25.25 0 0 1 6.75 0h.29a.5.5 0 0 1 .498.458l.423 5.07a1.69 1.69 0 0 1-1.059 1.711l-.053.022a.92.92 0 0 0-.58.884L6.47 15a.971.971 0 1 1-1.942 0l.202-6.855a.92.92 0 0 0-.58-.884l-.053-.022a1.69 1.69 0 0 1-1.059-1.712L3.462.458A.5.5 0 0 1 3.96 0z" />
-                                                            </svg>
-                                                            <p class="inclusion-name1">Meal</p>
-                                                        </div>
-
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <hr>
-
-                                        <div class="container">
-                                            <div class="row">
-                                                <div class="col-7 col-md-8">
-                                                    <p class="starting-from1">Starting From / Flights Extra</p>
-                                                    <div class="d-flex flex-row decoration-price">
-                                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="24" fill="currentColor" class="bi bi-currency-rupee" viewBox="0 0 16 16">
-                                                            <path d="M4 3.06h2.726c1.22 0 2.12.575 2.325 1.724H4v1.051h5.051C8.855 7.001 8 7.558 6.788 7.558H4v1.317L8.437 14h2.11L6.095 8.884h.855c2.316-.018 3.465-1.476 3.688-3.049H12V4.784h-1.345c-.08-.778-.357-1.335-.793-1.732H12V2H4z" />
-                                                        </svg>
-                                                        <P class="price1">49,999/-*</P>
-                                                    </div>
-
-                                                    <div class="d-flex flex-row">
-                                                        <svg xmlns="http://www.w3.org/2000/svg" width="17" height="30" fill="currentColor" class="bi bi-currency-rupee symbol-style" viewBox="0 0 16 16">
-                                                            <path d="M4 3.06h2.726c1.22 0 2.12.575 2.325 1.724H4v1.051h5.051C8.855 7.001 8 7.558 6.788 7.558H4v1.317L8.437 14h2.11L6.095 8.884h.855c2.316-.018 3.465-1.476 3.688-3.049H12V4.784h-1.345c-.08-.778-.357-1.335-.793-1.732H12V2H4z" />
-                                                        </svg>
-                                                        <P class="price2">44,999/-*</P>
-                                                    </div>
-
-                                                </div>
-                                                <div class="col-2col-md-2">
-                                                    <a href="bali2.html">  
-                                                    <button class="view-package-button">View Package</button>
-                                                 </a>
-                                                </div>
-
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-12 col-md-4">
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-12">
-                                    <div class="cards-container1">
-                                        <div class="text-center">
-                                            <img src="https://res.cloudinary.com/dlcuxbo8m/image/upload/v1747312858/Hai_gaes_Kali_ini_aku_mau_ngasih_info_nih_tentang_tempat_yang_wajib_kalian_masukin_dalam_list_liburan_ketika_berkunjung_ke_Bandung__Kali_inx3ue.jpg" class="card-img-icon1" alt="...">
-                                        </div>
-                                        <div class="text-center">
-                                            <button class="days-button">6 Nights / 7 Days</button>
-                                            <p class="validity">Validity : September 2025</p>
-                                            <div>
-                                                <div class="container">
-                                                    <div class="row">
-                                                        <div class="col-3 col-md-2 adjustment-inclusions-icons">
-                                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="icons-style1 bi bi-buildings-fill" viewBox="0 0 16 16">
-                                                                <path d="M15 .5a.5.5 0 0 0-.724-.447l-8 4A.5.5 0 0 0 6 4.5v3.14L.342 9.526A.5.5 0 0 0 0 10v5.5a.5.5 0 0 0 .5.5h9a.5.5 0 0 0 .5-.5V14h1v1.5a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5zM2 11h1v1H2zm2 0h1v1H4zm-1 2v1H2v-1zm1 0h1v1H4zm9-10v1h-1V3zM8 5h1v1H8zm1 2v1H8V7zM8 9h1v1H8zm2 0h1v1h-1zm-1 2v1H8v-1zm1 0h1v1h-1zm3-2v1h-1V9zm-1 2h1v1h-1zm-2-4h1v1h-1zm3 0v1h-1V7zm-2-2v1h-1V5zm1 0h1v1h-1z" />
-                                                            </svg>
-                                                            <p class="inclusion-name1">Hotel</p>
-                                                        </div>
-                                                        <div class="col-3 col-md-2 adjustment-inclusions-icons-site">
-                                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="icons-style1 ml-2 bi bi-binoculars" viewBox="0 0 16 16">
-                                                                <path d="M3 2.5A1.5 1.5 0 0 1 4.5 1h1A1.5 1.5 0 0 1 7 2.5V5h2V2.5A1.5 1.5 0 0 1 10.5 1h1A1.5 1.5 0 0 1 13 2.5v2.382a.5.5 0 0 0 .276.447l.895.447A1.5 1.5 0 0 1 15 7.118V14.5a1.5 1.5 0 0 1-1.5 1.5h-3A1.5 1.5 0 0 1 9 14.5v-3a.5.5 0 0 1 .146-.354l.854-.853V9.5a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v.793l.854.853A.5.5 0 0 1 7 11.5v3A1.5 1.5 0 0 1 5.5 16h-3A1.5 1.5 0 0 1 1 14.5V7.118a1.5 1.5 0 0 1 .83-1.342l.894-.447A.5.5 0 0 0 3 4.882zM4.5 2a.5.5 0 0 0-.5.5V3h2v-.5a.5.5 0 0 0-.5-.5zM6 4H4v.882a1.5 1.5 0 0 1-.83 1.342l-.894.447A.5.5 0 0 0 2 7.118V13h4v-1.293l-.854-.853A.5.5 0 0 1 5 10.5v-1A1.5 1.5 0 0 1 6.5 8h3A1.5 1.5 0 0 1 11 9.5v1a.5.5 0 0 1-.146.354l-.854.853V13h4V7.118a.5.5 0 0 0-.276-.447l-.895-.447A1.5 1.5 0 0 1 12 4.882V4h-2v1.5a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5zm4-1h2v-.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5zm4 11h-4v.5a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5zm-8 0H2v.5a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5z" />
-                                                            </svg>
-                                                            <p class="inclusion-name1 site-seeing-edit mr-5">Sightseeing</p>
-                                                        </div>
-                                                        <div class="col-3 col-md-2 adjustment-inclusions-icons">
-                                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="icons-style1 bi bi-car-front" viewBox="0 0 16 16">
-                                                                <path d="M4 9a1 1 0 1 1-2 0 1 1 0 0 1 2 0m10 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0M6 8a1 1 0 0 0 0 2h4a1 1 0 1 0 0-2zM4.862 4.276 3.906 6.19a.51.51 0 0 0 .497.731c.91-.073 2.35-.17 3.597-.17s2.688.097 3.597.17a.51.51 0 0 0 .497-.731l-.956-1.913A.5.5 0 0 0 10.691 4H5.309a.5.5 0 0 0-.447.276" />
-                                                                <path d="M2.52 3.515A2.5 2.5 0 0 1 4.82 2h6.362c1 0 1.904.596 2.298 1.515l.792 1.848c.075.175.21.319.38.404.5.25.855.715.965 1.262l.335 1.679q.05.242.049.49v.413c0 .814-.39 1.543-1 1.997V13.5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1-.5-.5v-1.338c-1.292.048-2.745.088-4 .088s-2.708-.04-4-.088V13.5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1-.5-.5v-1.892c-.61-.454-1-1.183-1-1.997v-.413a2.5 2.5 0 0 1 .049-.49l.335-1.68c.11-.546.465-1.012.964-1.261a.8.8 0 0 0 .381-.404l.792-1.848ZM4.82 3a1.5 1.5 0 0 0-1.379.91l-.792 1.847a1.8 1.8 0 0 1-.853.904.8.8 0 0 0-.43.564L1.03 8.904a1.5 1.5 0 0 0-.03.294v.413c0 .796.62 1.448 1.408 1.484 1.555.07 3.786.155 5.592.155s4.037-.084 5.592-.155A1.48 1.48 0 0 0 15 9.611v-.413q0-.148-.03-.294l-.335-1.68a.8.8 0 0 0-.43-.563 1.8 1.8 0 0 1-.853-.904l-.792-1.848A1.5 1.5 0 0 0 11.18 3z" />
-                                                            </svg>
-                                                            <p class="inclusion-name1">Transfer</p>
-                                                        </div>
-                                                        <div class="col-3 col-md-2 adjustment-inclusions-icons">
-                                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="icons-style1 bi bi-fork-knife" viewBox="0 0 16 16">
-                                                                <path d="M13 .5c0-.276-.226-.506-.498-.465-1.703.257-2.94 2.012-3 8.462a.5.5 0 0 0 .498.5c.56.01 1 .13 1 1.003v5.5a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5zM4.25 0a.25.25 0 0 1 .25.25v5.122a.128.128 0 0 0 .256.006l.233-5.14A.25.25 0 0 1 5.24 0h.522a.25.25 0 0 1 .25.238l.233 5.14a.128.128 0 0 0 .256-.006V.25A.25.25 0 0 1 6.75 0h.29a.5.5 0 0 1 .498.458l.423 5.07a1.69 1.69 0 0 1-1.059 1.711l-.053.022a.92.92 0 0 0-.58.884L6.47 15a.971.971 0 1 1-1.942 0l.202-6.855a.92.92 0 0 0-.58-.884l-.053-.022a1.69 1.69 0 0 1-1.059-1.712L3.462.458A.5.5 0 0 1 3.96 0z" />
-                                                            </svg>
-                                                            <p class="inclusion-name1">Meal</p>
-                                                        </div>
-
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <hr>
-
-                                        <div class="container">
-                                            <div class="row">
-                                                <div class="col-7 col-md-8">
-                                                    <p class="starting-from1">Starting From / Flights Extra</p>
-                                                    <div class="d-flex flex-row decoration-price">
-                                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="24" fill="currentColor" class="bi bi-currency-rupee" viewBox="0 0 16 16">
-                                                            <path d="M4 3.06h2.726c1.22 0 2.12.575 2.325 1.724H4v1.051h5.051C8.855 7.001 8 7.558 6.788 7.558H4v1.317L8.437 14h2.11L6.095 8.884h.855c2.316-.018 3.465-1.476 3.688-3.049H12V4.784h-1.345c-.08-.778-.357-1.335-.793-1.732H12V2H4z" />
-                                                        </svg>
-                                                        <P class="price1">59,999/-*</P>
-                                                    </div>
-
-                                                    <div class="d-flex flex-row">
-                                                        <svg xmlns="http://www.w3.org/2000/svg" width="17" height="30" fill="currentColor" class="bi bi-currency-rupee symbol-style" viewBox="0 0 16 16">
-                                                            <path d="M4 3.06h2.726c1.22 0 2.12.575 2.325 1.724H4v1.051h5.051C8.855 7.001 8 7.558 6.788 7.558H4v1.317L8.437 14h2.11L6.095 8.884h.855c2.316-.018 3.465-1.476 3.688-3.049H12V4.784h-1.345c-.08-.778-.357-1.335-.793-1.732H12V2H4z" />
-                                                        </svg>
-                                                        <P class="price2">52,999/-*</P>
-                                                    </div>
-
-                                                </div>
-                                                <div class="col-2col-md-2">
-                                                    <a href="bali3.html">  
-                                                    <button class="view-package-button">View Package</button>
-                                               </a>
-                                                </div>
-
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-
+  <div class="exotic-bg-container">
+    <!-- Logo + Heading -->
+    <div class="header-container">
+      <img src="https://res.cloudinary.com/dlcuxbo8m/image/upload/v1743149772/bglogo-removebg-preview_fmj5c6.png" class="company-logo" />
+      <div class="home-heading">Exotic Destinations</div>
     </div>
 
-<div>
-    <div class="shadow footer-container">
-
-        <div class="footer-section">
-            <img src="https://res.cloudinary.com/dlcuxbo8m/image/upload/v1747807476/buzz_holidays-removebg-preview_apjhtk.png" alt="Buzz Holidays Logo">
-        </div>
-
-        <div class="footer-section">
-            <div class="footer-title">Products</div>
-            <div class="footer-item">Search Flights</div>
-            <div class="footer-item">Search Hotels</div>
-            <div class="footer-item">Search Buses</div>
-        </div>
-
-        <div class="footer-section">
-            <div class="footer-title">Terms & Conditions</div>
-            <div class="footer-item">Privacy Policy</div>
-            <div class="footer-item">About Us</div>
-            <div class="footer-item">Cancellation & Visa Policy</div>
-        </div>
-
-        <div class="footer-section">
-            <div class="footer-title">Contact Info</div>
-            <div class="footer-item">sales@buzzholidayz.com</div>
-            <div class="footer-item">+91 88868 72872</div>
-            <div class="footer-item">+91 88860 08060</div>
-        </div>
-
-        <div class="footer-section">
-            <div class="footer-title">Follow Us</div>
-            <div class="social-icons">
-                <!-- Facebook -->
-                <a href="https://www.facebook.com/share/1YoCehQkw2/" target="_blank">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
-                        <path d="M16 8.049A8 8 0 1 0 7.25 15.96v-5.625h-2.03V8.05H7.25V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218L11.615 10.335H9.75V16A8 8 0 0 0 16 8.049Z" />
-                    </svg>
-                </a>
-                <!-- Instagram -->
-                <a href="https://www.instagram.com/buzzholidayz_and_buzzforex?igsh=d2RnODk2dTcyNm1k" target="_blank">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
-                        <path d="M8 0C5.8 0 5.5.01 4.7.05c-.8.03-1.3.17-1.8.37A3.9 3.9 0 0 0 .42 2.76c-.2.5-.34 1-.37 1.8C.01 5.6 0 5.83 0 8c0 2.2.01 2.44.05 3.3.03.8.17 1.3.37 1.8a3.9 3.9 0 0 0 .93 1.42 3.9 3.9 0 0 0 1.42.93c.5.2 1 .34 1.8.37.85.04 1.12.05 3.3.05s2.44-.01 3.3-.05c.8-.03 1.3-.17 1.8-.37a3.9 3.9 0 0 0 1.42-.93 3.9 3.9 0 0 0 .93-1.42c.2-.5.34-1 .37-1.8.04-.85.05-1.12.05-3.3s-.01-2.44-.05-3.3c-.03-.8-.17-1.3-.37-1.8A3.9 3.9 0 0 0 13.24.42a3.9 3.9 0 0 0-1.42-.93c-.5-.2-1-.34-1.8-.37C10.4.01 10.2 0 8 0ZM8 5.44A2.67 2.67 0 1 1 8 10.78 2.67 2.67 0 0 1 8 5.44Zm4.27-1.67a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92Z" />
-                    </svg>
-                </a>
-                <!-- youtube -->
-                <a href="https://youtube.com/@buzzgroups-stk4166?si=unW1VFiZRcetpLMZ" target="_blank">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" class="youtube-icon" viewBox="0 0 576 512" fill="currentColor">
-                        <path d="M549.655 124.083C534.73 80.75 494.126 50.936 448 48.54 393.042 45.89 288 45.89 288 45.89s-105.042 0-160 2.65c-46.126 2.396-86.73 32.21-101.655 75.543C16 169.67 16 256 16 256s0 86.33 10.345 131.917C45.27 431.25 85.874 461.064 132 463.46c54.958 2.65 160 2.65 160 2.65s105.042 0 160-2.65c46.126-2.396 86.73-32.21 101.655-75.543C560 342.33 560 256 560 256s0-86.33-10.345-131.917zM232 336V176l142 80-142 80z" />
-                    </svg>
-                </a>
-            </div>
-        </div>
-
-
-
-        <div class="footer-bottom">
-            © 2023 by STK FOREX & LEISURE PRIVATE LIMITED - All Rights Reserved
-        </div>
+    <!-- Cards -->
+    <div class="card-grid">
+      <div class="card">
+        <a href="bali_landpackage/baliindex.html"> <img src="https://res.cloudinary.com/dlcuxbo8m/image/upload/v1748602466/download_60_npfsn8.jpg" alt="Card 1" />
+        </a>
+<div class="card-content"><h3>BALI</h3></div>
+      </div>
+      <div class="card">
+        <a href="Vietnam_landpackage/vietnamindex.html"><img src="https://res.cloudinary.com/dlcuxbo8m/image/upload/v1748602513/Vietnam_3_k7mhiw.jpg" alt="Card 2" />
+        </a>
+        <div class="card-content"><h3>VIETNAM</h3></div>
+      </div>
+      <div class="card">
+        <a href="srilanka_landpackage/srilankaindex.html"><img src="https://res.cloudinary.com/dlcuxbo8m/image/upload/v1748588850/download_55_e3pp0m.jpg" alt="Card 3" />
+       </a>
+         <div class="card-content"><h3>SRILANKA</h3></div>
+      </div>
+      <div class="card">
+        <a href="almaty_landpackage/almatyindex.html"><img src="https://res.cloudinary.com/dlcuxbo8m/image/upload/v1748602002/10_Must-Visit_Places_in_Hungary_for_an_Unforgettable_Trip_fignv0.jpg" alt="Card 4" />
+       </a>
+         <div class="card-content"><h3>ALMATY</h3></div>
+      </div>
+      <div class="card">
+        <a href="europe_landpackage/europeindex.html"> <img src="https://res.cloudinary.com/dlcuxbo8m/image/upload/v1748602002/44_Landmarks_In_Europe_You_Can_t_Miss_xkqh5p.jpg" alt="Card 5" />
+        </a>
+       <div class="card-content"><h3>EUROPE</h3></div>
+      </div>
     </div>
+  </div>
 
+  <script>
+    const observer = new IntersectionObserver(
+      entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+          }
+        });
+      },
+      { threshold: 0.2 }
+    );
 
-</div>
-
-<div>
-     <div>
-        <div class="fixed-button-container" id="submittSection">
-            <a href="https://api.whatsapp.com/send?phone=919160895608&text=Hi%20%2C%20I%20just%20saw%20your%20ad%20on%20the%20bali%20packages%20and%20wanted%20to%20know%20more." target="_blank">
-                <img src="https://res.cloudinary.com/dlcuxbo8m/image/upload/v1747737439/Circle_Whatsapp_logotype_icon_Social_media_app_Network_application_Popular_editorial_brand_Vector_illustration___Premium_Vector_ztafii.jpg" alt="">
-            </a>
-        </div>
-    </div>
-
-</div>
-
-    <script type="text/javascript" src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-static-website/js/ccbp-ui-kit.js"></script>
-
-    </div>
+    document.querySelectorAll('.card').forEach(card => {
+      observer.observe(card);
+    });
+  </script>
 </body>
 </html>
